@@ -1,7 +1,8 @@
+import {StatusBar} from 'react-native';
 import {useEffect, useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from '../screens/frontendScreens/splashScreen/SplashScreen';
-import HomeScreen from '../screens/frontendScreens/homeScreen/HomeScreen';
+import MyProfileScreen from '../screens/frontendScreens/myProfileScreen/MyProfileScreen';
 
 const stack = createNativeStackNavigator();
 export default function StackNavigation() {
@@ -13,26 +14,29 @@ export default function StackNavigation() {
   }, []);
 
   return (
-    <stack.Navigator>
-      {isOpen ? (
-        <stack.Screen
-          name="authStack"
-          component={SplashScreen}
-          options={{
-            headerShown: false,
-          }}
-        />
-      ) : (
-        <>
+    <>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
+      <stack.Navigator>
+        {isOpen ? (
           <stack.Screen
-            name="loginScreen"
-            component={HomeScreen}
+            name="authStack"
+            component={SplashScreen}
             options={{
               headerShown: false,
             }}
           />
-        </>
-      )}
-    </stack.Navigator>
+        ) : (
+          <>
+            <stack.Screen
+              name="loginScreen"
+              component={MyProfileScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+          </>
+        )}
+      </stack.Navigator>
+    </>
   );
 }

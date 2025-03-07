@@ -3,7 +3,7 @@ import TopBar from '../../../components/topBar/TopBar';
 import Input from '../../../components/input/Input';
 import Button from '../../../components/button/Button';
 import LoginBottom from '../../../components/loginBottom/LoginBottom';
-import {styles} from './loginScreenStyles';
+import {styles} from './loginStyles';
 import useLogin from '../../../hooks/useLogin/useLogin';
 export default function LoginScreen() {
   const {email, password, setEmail, setPassword, handleSubmit} = useLogin();

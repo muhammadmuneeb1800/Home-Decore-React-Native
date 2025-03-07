@@ -12,7 +12,14 @@ export const styles = StyleSheet.create({
     fontWeight: 600,
     lineHeight: 23,
     color: COLORS.primaryDark,
-    marginTop: 50,
+    marginTop: 20,
+  },
+  best: {
+    fontSize: 15,
+    fontWeight: 500,
+    lineHeight: 23,
+    color: COLORS.primaryDark,
+    marginTop: 20,
   },
   input: {
     marginBottom: 10,

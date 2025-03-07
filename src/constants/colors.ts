@@ -5,7 +5,7 @@ export const COLORS = {
   secondaryDark: '#DCBEB6',
   tertiary: '#f1c40f',
   quaternary: '#e74c3c',
-  lightGrey: '#ecf0f1',
+  lightGrey: '#FAF0E6',
   darkGrey: '#34495e',
   white: '#ffffff',
   black: '#363130',

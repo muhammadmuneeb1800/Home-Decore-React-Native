@@ -1,6 +1,6 @@
 import {View, Text} from 'react-native';
 import TopBar from '../../../components/topBar/TopBar';
-import {styles} from './resetPasswordScreenStyles';
+import {styles} from './resetPasswordStyles';
 import Input from '../../../components/input/Input';
 import Button from '../../../components/button/Button';
 

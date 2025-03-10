@@ -1,23 +1,30 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import Facebook from '../../assets/icons/facebook.svg';
+import Google from '../../assets/icons/google.svg';
 import {styles} from './loginBottomStyles';
+import {useNavigation} from '@react-navigation/native';
+import {navigationProps} from '../../types/type';
 
 export default function LoginBottom() {
+  const navigation = useNavigation<navigationProps>();
   return (
-    <View>
+    <>
       <Text style={styles.an}>or sign in with</Text>
       <View style={styles.icons}>
         <TouchableOpacity>
-          <Image source={require('../../assets/images/facebook-icon.png')} />
+          <Facebook width={40} height={40} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image source={require('../../assets/images/google-icon.png')} />
+          <Google width={39} height={39} />
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.dont}>
+      <TouchableOpacity
+        style={styles.dont}
+        onPress={() => navigation.navigate('register')}>
         <Text style={styles.an}>Don't have an account? </Text>
         <Text style={styles.up}>Sign Up</Text>
       </TouchableOpacity>
-    </View>
+    </>
   );
 }

@@ -1,12 +1,12 @@
 import {ScrollView, Text, View} from 'react-native';
-import Input from '../../../components/input/Input';
-import TopBar from '../../../components/topBar/TopBar';
+import useRegister from '../../hooks/useRegister/useRegister';
 import {styles} from './registerStyles';
-import LoginBottom from '../../../components/loginBottom/LoginBottom';
-import Button from '../../../components/button/Button';
-import useRegister from '../../../hooks/useRegister/useRegister';
+import TopBar from '../../components/topBar/TopBar';
+import Input from '../../components/input/Input';
+import Button from '../../components/button/Button';
+import LoginBottom from '../../components/loginBottom/LoginBottom';
 
-export default function RegisterScreen() {
+export default function Register() {
   const {
     name,
     email,

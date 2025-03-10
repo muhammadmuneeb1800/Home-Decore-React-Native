@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {showToast} from '../../utils/showToast';
+import {showToast} from '../../components/showToast/ShowToast';
 
 export default function useRegister() {
   const [name, setName] = useState<string>('');

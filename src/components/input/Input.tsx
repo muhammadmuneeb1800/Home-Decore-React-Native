@@ -17,9 +17,6 @@ export default function Input(props: TextInputProps) {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(
     props.secureTextEntry ?? false,
   );
-
-  console.log(isPasswordVisible);
-
   const handleTogglePassword = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };

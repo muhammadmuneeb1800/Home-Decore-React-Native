@@ -1,11 +1,14 @@
 import {View, Text, Image} from 'react-native';
-import {styles} from './getStartedScreenStyles';
-import Button from '../../../components/button/Button';
-export default function GetStartedScreen() {
+import {styles} from './getStartedStyles';
+import Button from '../../components/button/Button';
+import {useNavigation} from '@react-navigation/native';
+import {navigationProps} from '../../types/type';
+export default function GetStarted() {
+  const navigation = useNavigation<navigationProps>();
   return (
     <View style={styles.container}>
       <View style={styles.imgBox}>
-        <Image source={require('../../../assets/images/home-vector.png')} />
+        <Image source={require('../../assets/images/home-vector.png')} />
         <Text style={styles.homeText}>HOME</Text>
         <Text style={styles.decorText}>DECOR</Text>
       </View>
@@ -14,8 +17,11 @@ export default function GetStartedScreen() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod.
         </Text>
-        <Button text="Log In" />
-        <Button text="Sign up" />
+        <Button onPress={() => navigation.navigate('login')} text="Log In" />
+        <Button
+          onPress={() => navigation.navigate('register')}
+          text="Sign up"
+        />
       </View>
     </View>
   );

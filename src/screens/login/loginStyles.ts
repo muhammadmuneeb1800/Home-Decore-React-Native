@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants/colors';
+import {COLORS} from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,17 +9,20 @@ export const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
-    justifyContent: 'space-between',
+    height: '100%',
+    backgroundColor: 'blue',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
   main: {
     flex: 1,
+    backgroundColor: 'green',
   },
   top: {
     marginTop: 10,
   },
   wel: {
-    marginTop: 50,
+    marginTop: 40,
     color: COLORS.black,
     fontSize: 20,
     lineHeight: 22,
@@ -33,7 +36,7 @@ export const styles = StyleSheet.create({
     marginTop: 8,
   },
   form: {
-    marginTop: 40,
+    marginTop: 30,
   },
   input: {
     marginTop: 25,
@@ -54,7 +57,9 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   last: {
-    marginVertical: 40,
+    backgroundColor: 'black',
+    flex: 1,
+    justifyContent: 'center',
   },
   dont: {
     flexDirection: 'row',

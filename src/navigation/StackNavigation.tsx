@@ -1,10 +1,10 @@
 import {StatusBar} from 'react-native';
 import {useEffect, useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SplashScreen from '../screens/frontendScreens/splashScreen/SplashScreen';
-import MyProfileScreen from '../screens/frontendScreens/myProfileScreen/MyProfileScreen';
+import Splash from '../screens/splash/Splash';
+import {AUTH_STACK} from '../constants/constants';
 
-const stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 export default function StackNavigation() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
@@ -16,27 +16,30 @@ export default function StackNavigation() {
   return (
     <>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
-      <stack.Navigator>
+      <Stack.Navigator>
         {isOpen ? (
-          <stack.Screen
-            name="authStack"
-            component={SplashScreen}
+          <Stack.Screen
+            name="splash"
+            component={Splash}
             options={{
               headerShown: false,
             }}
           />
         ) : (
           <>
-            <stack.Screen
-              name="loginScreen"
-              component={MyProfileScreen}
-              options={{
-                headerShown: false,
-              }}
-            />
+            {AUTH_STACK?.map(({name, component}) => (
+              <Stack.Screen
+                key={name}
+                name={name}
+                component={component}
+                options={{
+                  headerShown: false,
+                }}
+              />
+            ))}
           </>
         )}
-      </stack.Navigator>
+      </Stack.Navigator>
     </>
   );
 }

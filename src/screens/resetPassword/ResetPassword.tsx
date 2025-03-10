@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
-import TopBar from '../../../components/topBar/TopBar';
 import {styles} from './resetPasswordStyles';
-import Input from '../../../components/input/Input';
-import Button from '../../../components/button/Button';
+import TopBar from '../../components/topBar/TopBar';
+import Input from '../../components/input/Input';
+import Button from '../../components/button/Button';
 
-export default function ResetPasswordScreen() {
+export default function ResetPassword() {
   return (
     <View style={styles.container}>
       <TopBar text="Set Password" icon="arrowleft" />

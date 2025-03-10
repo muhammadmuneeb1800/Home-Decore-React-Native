@@ -15,6 +15,7 @@ interface TopBarProps {
   iconSize1?: number;
   iconSize2?: number;
   iconSize3?: number;
+  IconOnpress1?: () => void;
 }
 
 export default function TopBar(props: TopBarProps) {
@@ -38,6 +39,7 @@ export default function TopBar(props: TopBarProps) {
       <View style={styles.icons}>
         {props.icon1 && (
           <TouchableOpacity
+            onPress={props.IconOnpress1}
             style={props.icon1 === 'search1' ? styles.searchIcon : undefined}>
             <AntDesign
               name={props.icon1}

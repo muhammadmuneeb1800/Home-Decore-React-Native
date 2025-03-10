@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-export default function CategoryFlatList() {
+export default function CategoryList() {
   return (
     <View>
-      <Text>CategoryFlatList</Text>
+      <Text>CategoryList</Text>
     </View>
   );
 }

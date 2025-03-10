@@ -1,14 +1,14 @@
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {styles} from './myProfileScreenStyles';
-import TopBar from '../../../components/topBar/TopBar';
+import {styles} from './myProfileStyles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {COLORS} from '../../../constants/colors';
-import Links from '../../../components/links/Links';
-import {LINKS} from '../../../constants/constants';
+import TopBar from '../../components/topBar/TopBar';
+import {COLORS} from '../../constants/colors';
+import {LINKS} from '../../constants/constants';
+import Links from '../../components/links/Links';
 
-export default function MyProfileScreen() {
+export default function MyProfile() {
   return (
     <View style={styles.container}>
       <View>
@@ -19,7 +19,7 @@ export default function MyProfileScreen() {
           iconSize2={26}
         />
         <View style={styles.mainProfile}>
-          <Image source={require('../../../assets/images/profile.png')} />
+          <Image source={require('../../assets/images/profile.png')} />
           <Text style={styles.name}>Madison Smith</Text>
           <View style={styles.mainId}>
             <Text style={styles.id}>ID: </Text>
@@ -47,8 +47,8 @@ export default function MyProfileScreen() {
           </TouchableOpacity>
         </View>
         <View style={styles.links}>
-          {LINKS.map(link => (
-            <Links {...link} />
+          {LINKS?.map(link => (
+            <Links key={link.title} {...link} />
           ))}
         </View>
       </View>

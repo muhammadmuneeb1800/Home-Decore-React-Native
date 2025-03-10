@@ -1,9 +1,9 @@
 import {View, Text, TextInput} from 'react-native';
-import TopBar from '../../../components/topBar/TopBar';
-import Button from '../../../components/button/Button';
 import {styles} from './forgotPasswordStyles';
+import TopBar from '../../components/topBar/TopBar';
+import Button from '../../components/button/Button';
 
-export default function ForgotPasswordScreen() {
+export default function ForgotPassword() {
   return (
     <>
       <View style={styles.container}>
@@ -18,7 +18,7 @@ export default function ForgotPasswordScreen() {
       </View>
       <View style={styles.formWhite}>
         <View style={styles.form}>
-          <View style={styles.mainInput}>
+          <View>
             <Text style={styles.lable}>Enter your email address</Text>
             <TextInput
               style={styles.input}

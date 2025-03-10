@@ -1,19 +1,26 @@
 import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
-import TopBar from '../../../components/topBar/TopBar';
-import Input from '../../../components/input/Input';
-import Button from '../../../components/button/Button';
-import LoginBottom from '../../../components/loginBottom/LoginBottom';
 import {styles} from './loginStyles';
-import useLogin from '../../../hooks/useLogin/useLogin';
-export default function LoginScreen() {
-  const {email, password, setEmail, setPassword, handleSubmit} = useLogin();
+import useLogin from '../../hooks/useLogin/useLogin';
+import TopBar from '../../components/topBar/TopBar';
+import Input from '../../components/input/Input';
+import Button from '../../components/button/Button';
+import LoginBottom from '../../components/loginBottom/LoginBottom';
+export default function Login() {
+  const {
+    email,
+    password,
+    setEmail,
+    setPassword,
+    handleSubmit,
+    navigationStack,
+  } = useLogin();
   return (
     <View style={styles.container}>
       <View style={styles.top}>
         <TopBar text="Login" icon="arrowleft" />
       </View>
-      <View style={styles.mainContainer}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.mainContainer}>
           <View style={styles.main}>
             <Text style={styles.wel}>Welcome</Text>
             <Text style={styles.please}>
@@ -40,14 +47,9 @@ export default function LoginScreen() {
                 />
               </View>
               <View style={styles.btns}>
-                <Button
-                  onPress={() => {
-                    console.log('click');
-                    handleSubmit();
-                  }}
-                  text="Login"
-                />
-                <TouchableOpacity>
+                <Button onPress={() => handleSubmit()} text="Login" />
+                <TouchableOpacity
+                  onPress={() => navigationStack.navigate('forgot')}>
                   <Text style={styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
               </View>
@@ -56,8 +58,8 @@ export default function LoginScreen() {
           <View style={styles.last}>
             <LoginBottom />
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </View>
   );
 }

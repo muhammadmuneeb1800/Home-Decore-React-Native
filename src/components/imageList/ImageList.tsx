@@ -1,12 +1,12 @@
 import {View, FlatList, Image} from 'react-native';
 import React, {useState} from 'react';
-import {styles} from './imageFlatListStyles';
+import {styles} from './imageListStyles';
 
 interface ImageFlatlistProps {
   images: any[];
 }
 
-export default function ImageFlatlist({images}: ImageFlatlistProps) {
+export default function ImageList({images}: ImageFlatlistProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <View style={styles.main}>

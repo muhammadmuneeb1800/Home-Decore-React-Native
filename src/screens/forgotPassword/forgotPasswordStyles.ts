@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants/colors';
+import {COLORS} from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   main: {
     marginTop: 50,
@@ -23,20 +23,18 @@ export const styles = StyleSheet.create({
     marginTop: 15,
   },
   formWhite: {
+    flex: 1,
+    paddingTop: 20,
     backgroundColor: 'white',
   },
   form: {
     flex: 1,
     padding: 20,
-    marginTop: 20,
     backgroundColor: COLORS.secondary,
     borderWidth: 1,
     borderColor: COLORS.secondary,
     borderTopRightRadius: 45,
     borderTopLeftRadius: 45,
-  },
-  mainInput: {
-    marginBottom: 40,
   },
   input: {
     fontSize: 16,
@@ -49,12 +47,12 @@ export const styles = StyleSheet.create({
     color: COLORS.primaryDark,
   },
   lable: {
-    marginTop: 55,
+    marginTop: 50,
     fontSize: 15,
     color: COLORS.black,
     fontWeight: 500,
     lineHeight: 22,
-    marginBottom: 10,
+    marginBottom: 12,
   },
   next: {
     justifyContent: 'center',

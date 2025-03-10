@@ -2,7 +2,7 @@ import {StatusBar} from 'react-native';
 import {useEffect, useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from '../screens/splash/Splash';
-import {AUTH_STACK} from '../constants/constants';
+import {AUTH_STACK, GUST_STACK} from '../constants/constants';
 
 const Stack = createNativeStackNavigator();
 export default function StackNavigation() {
@@ -28,6 +28,16 @@ export default function StackNavigation() {
         ) : (
           <>
             {AUTH_STACK?.map(({name, component}) => (
+              <Stack.Screen
+                key={name}
+                name={name}
+                component={component}
+                options={{
+                  headerShown: false,
+                }}
+              />
+            ))}
+            {GUST_STACK?.map(({name, component}) => (
               <Stack.Screen
                 key={name}
                 name={name}

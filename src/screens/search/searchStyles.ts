@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {COLORS} from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
@@ -31,5 +32,15 @@ export const styles = StyleSheet.create({
   error: {
     color: 'red',
     marginBottom: 10,
+  },
+  search: {
+    marginTop: 30,
+  },
+  top: {
+    color: COLORS.primaryDark,
+    fontWeight: 600,
+    fontSize: 22,
+    lineHeight: 23,
+    marginTop: 40,
   },
 });

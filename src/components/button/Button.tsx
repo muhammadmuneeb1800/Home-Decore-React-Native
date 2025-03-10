@@ -10,7 +10,11 @@ export default function Button(props: buttonTypes) {
   return (
     <TouchableOpacity
       onPress={props.onPress}
-      style={props.text === 'Sign Up' ? styles.button2 : styles.button}>
+      style={
+        props.text === 'Sign Up' || props.text === 'Log Out'
+          ? styles.button2
+          : styles.button
+      }>
       <Text
         style={
           props.text === 'Sign Up' ? styles.buttonText2 : styles.buttonText

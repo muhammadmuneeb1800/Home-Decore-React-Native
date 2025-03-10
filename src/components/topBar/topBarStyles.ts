@@ -34,6 +34,13 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: 'center',
   },
+  title1: {
+    color: COLORS.primaryDark,
+    fontSize: 20,
+    fontWeight: 600,
+    lineHeight: 22,
+    textAlign: 'center',
+  },
   searchIcon: {
     justifyContent: 'center',
     alignItems: 'center',

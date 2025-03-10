@@ -28,12 +28,12 @@ export const styles = StyleSheet.create({
   },
   id: {
     fontSize: 13,
-    fontWeight: 600,
+    fontWeight: 700,
     color: COLORS.blackDark,
   },
   num: {
     fontSize: 13,
-    fontWeight: 500,
+    fontWeight: 400,
     color: COLORS.blackDark,
   },
   input: {
@@ -77,7 +77,26 @@ export const styles = StyleSheet.create({
   links: {
     marginTop: 30,
     flexDirection: 'column',
-    gap: 15,
+    justifyContent: 'center',
+    gap: 18,
     marginLeft: 15,
+  },
+  main: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 15,
+  },
+  searchIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLORS.primary,
+    borderRadius: 40,
+    width: 35,
+    height: 35,
+  },
+  text: {
+    fontSize: 20,
+    color: COLORS.black,
+    fontWeight: 400,
   },
 });

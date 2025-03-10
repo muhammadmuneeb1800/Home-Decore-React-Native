@@ -10,4 +10,5 @@ export const COLORS = {
   white: '#ffffff',
   black: '#363130',
   blackDark: '#4B4544',
+  newBlack: '#232323',
 };

@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     backgroundColor: COLORS.secondary,
     borderColor: '#CCCCCC',
-    borderRadius: 25,
+    borderRadius: 23,
   },
   input: {
     width: '90%',
@@ -26,5 +26,29 @@ export const styles = StyleSheet.create({
   },
   input1: {
     color: COLORS.primaryDark,
+  },
+  searchInput: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderColor: COLORS.primaryDark,
+    borderWidth: 1.5,
+    borderRadius: 25,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+  },
+  search: {
+    fontSize: 13,
+    color: COLORS.newBlack,
+    fontWeight: 300,
+    paddingHorizontal: 10,
+    lineHeight: 16,
+    width: '90%',
+  },
+  div: {
+    backgroundColor: COLORS.primary,
+    padding: 3,
+    borderRadius: 25,
   },
 });

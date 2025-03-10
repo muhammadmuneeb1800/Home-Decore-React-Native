@@ -13,6 +13,9 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Carts from '../screens/carts/Carts';
 import BottomTabNavigation from '../navigation/BottomTabNavigation';
 import Search from '../screens/search/Search';
+import UpdateProfile from '../screens/updateProfile/UpdateProfile';
+import UpdatePassword from '../screens/updatePassword/UpdatePassword';
+import MyOrders from '../screens/myOrders/MyOrders';
 
 export const AUTH_STACK = [
   {name: 'tab', component: BottomTabNavigation},
@@ -21,7 +24,13 @@ export const AUTH_STACK = [
   {name: 'register', component: Register},
   {name: 'forgot', component: ForgotPassword},
   {name: 'reset', component: ResetPassword},
+];
+
+export const GUST_STACK = [
   {name: 'search', component: Search},
+  {name: 'updateProfile', component: UpdateProfile},
+  {name: 'updatePassword', component: UpdatePassword},
+  {name: 'myOrders', component: MyOrders},
 ];
 
 export const TAB_STACK = [

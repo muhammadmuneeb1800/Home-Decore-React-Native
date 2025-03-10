@@ -16,6 +16,7 @@ interface TopBarProps {
   iconSize2?: number;
   iconSize3?: number;
   IconOnpress1?: () => void;
+  IconOnpress2?: () => void;
 }
 
 export default function TopBar(props: TopBarProps) {
@@ -34,7 +35,9 @@ export default function TopBar(props: TopBarProps) {
         </View>
       )}
       <View>
-        <Text style={styles.title}>{props.text}</Text>
+        <Text style={props.text === 'Search' ? styles.title1 : styles.title}>
+          {props.text}
+        </Text>
       </View>
       <View style={styles.icons}>
         {props.icon1 && (
@@ -51,7 +54,7 @@ export default function TopBar(props: TopBarProps) {
           </TouchableOpacity>
         )}
         {props.icon2 && (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={props.IconOnpress2}>
             <MaterialCommunityIcons
               name={props.icon2}
               size={props.iconSize2 || 24}

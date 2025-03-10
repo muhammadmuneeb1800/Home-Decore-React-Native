@@ -13,6 +13,9 @@ type RootStateListStack = {
   reset?: undefined;
   home?: undefined;
   search?: undefined;
+  updateProfile?: undefined;
+  updatePassword?: undefined;
+  myOrders?: undefined;
 };
 
 export type navigationPropsStack =

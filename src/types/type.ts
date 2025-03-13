@@ -28,3 +28,5 @@ type RootStateListTab = {
 };
 
 export type navigationPropsTab = BottomTabNavigationProp<RootStateListTab>;
+
+export type SizeType = 'xSmall' | 'small' | 'medium' | 'large' | 'full';

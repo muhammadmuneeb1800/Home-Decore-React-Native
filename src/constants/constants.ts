@@ -16,6 +16,7 @@ import Search from '../screens/search/Search';
 import UpdateProfile from '../screens/updateProfile/UpdateProfile';
 import UpdatePassword from '../screens/updatePassword/UpdatePassword';
 import MyOrders from '../screens/myOrders/MyOrders';
+import {SizeType} from '../types/type';
 
 export const AUTH_STACK = [
   {name: 'tab', component: BottomTabNavigation},
@@ -88,4 +89,42 @@ export const LINKS = [
     route: 'Logout',
     icon: 'log-out-outline',
   },
+];
+
+export const CATEGORIES: {title: string; size: SizeType}[] = [
+  {title: 'Decorative Light', size: 'xSmall'},
+  {title: 'Sofa', size: 'small'},
+  {title: 'Beds', size: 'large'},
+  {title: 'Tables', size: 'medium'},
+  {title: 'Chairs', size: 'small'},
+  {title: 'Cupboard', size: 'medium'},
+  {title: 'Decor', size: 'full'},
+];
+
+export const PRODUCTS = [
+  {
+    id: '1',
+    title: 'Aluminum Chair',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    price: '$200',
+    // image: require('./path/to/image.jpg'), // Agar local image ho
+    isFavorite: false,
+  },
+  {
+    id: '2',
+    title: 'Wooden Table',
+    description: 'Elegant wooden table for your living room',
+    price: '$350',
+    // image: require('./path/to/image2.jpg'),
+    isFavorite: true,
+  },
+];
+
+export const TOP_SEARCH = [
+  {name: 'Bed'},
+  {name: 'Lamp'},
+  {name: 'Plastic Plants'},
+  {name: 'Carpet'},
+  {name: 'Sofa'},
+  {name: 'Blue Chairs'},
 ];

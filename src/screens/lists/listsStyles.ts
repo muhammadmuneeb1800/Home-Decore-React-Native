@@ -7,27 +7,43 @@ export const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 20,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  containerList: {
+    marginTop: 30,
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  item: {
+    backgroundColor: '#f4b4a3',
+    borderRadius: 12,
     marginBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  input: {
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    paddingHorizontal: 10,
-    borderRadius: 5,
-  },
-  button: {
-    backgroundColor: '#4caf50',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
-  },
-  buttonText: {
+  text: {
     color: '#fff',
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontSize: 16,
+  },
+  xSmall: {
+    width: '48%',
+    height: 100,
+  },
+  small: {
+    width: '48%',
+    height: 150,
+  },
+  medium: {
+    width: '48%',
+    height: 170,
+  },
+  large: {
+    width: '48%',
+    height: 200,
+  },
+  full: {
+    width: '100%',
+    height: 100,
   },
 });

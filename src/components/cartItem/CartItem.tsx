@@ -15,7 +15,11 @@ export default function CartItem() {
           <View style={styles.icons}>
             <TouchableOpacity
               style={styles.minus}
-              onPress={() => setCount(count - 1)}>
+              onPress={() => {
+                if (count > 0) {
+                  setCount(count - 1);
+                }
+              }}>
               <Entypo name="minus" size={21} color={COLORS.primary} />
             </TouchableOpacity>
             <Text style={styles.counterText}>{count}</Text>

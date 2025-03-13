@@ -40,7 +40,10 @@ export const styles = StyleSheet.create({
     color: COLORS.primaryDark,
     fontWeight: 600,
     fontSize: 22,
-    lineHeight: 23,
+    lineHeight: 25,
     marginTop: 40,
+  },
+  list: {
+    marginTop: 20,
   },
 });
